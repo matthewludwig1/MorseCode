@@ -21,15 +21,17 @@ public class MorseCode {
                 + "\n\n" + "Enter a message: ");
         inputWord.toUpperCase();
         char ch;
+        String morseWord;
+        morseWord = "";
         for (int i = 0; i < inputWord.length(); i++) {
             ch = inputWord.charAt(i); // checks each letter of the message
-            String morseWord = "";
+          
             // converts each instance of the character into its respective morse code
             if (ch == 'A') { 
                 morseWord += ".-";   
             }
             else if (ch == 'B'){  
-                morseWord += "-…";
+               morseWord += "-…";
             }
             else if (ch == 'C') {
                 morseWord += "-.-.";
@@ -103,8 +105,10 @@ public class MorseCode {
             else if (ch == 'Z') {
                 morseWord += "--..";
             }
-             JOptionPane.showMessageDialog(null, "Your message in morse code is: " + morseWord.charAt(i));
+            JOptionPane.showMessageDialog(null, "Your message in morse code is: " + ch);
         }
+       
+         
        
     
     }
